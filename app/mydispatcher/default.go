@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XrayR-project/XrayR/common/limiter"
-	"github.com/XrayR-project/XrayR/common/rule"
+	"github.com/amfiyong/XrayR/common/limiter"
+	"github.com/amfiyong/XrayR/common/rule"
 	"github.com/xtls/xray-core/common"
 	"github.com/xtls/xray-core/common/buf"
 	"github.com/xtls/xray-core/common/log"
@@ -206,7 +206,7 @@ func shouldOverride(ctx context.Context, result SniffResult, request session.Sni
 			return false
 		}
 	}
-    var fakeDNSEngine dns.FakeDNSEngine
+	var fakeDNSEngine dns.FakeDNSEngine
 	core.RequireFeatures(ctx, func(fdns dns.FakeDNSEngine) {
 		fakeDNSEngine = fdns
 	})
@@ -438,7 +438,7 @@ func (d *DefaultDispatcher) routedDispatch(ctx context.Context, link *transport.
 
 	routingLink := routing_session.AsRoutingContext(ctx)
 	inTag := routingLink.GetInboundTag()
-	
+
 	if forcedOutboundTag := session.GetForcedOutboundTagFromContext(ctx); forcedOutboundTag != "" {
 		ctx = session.SetForcedOutboundTagToContext(ctx, "")
 		if h := d.ohm.GetHandler(forcedOutboundTag); h != nil {

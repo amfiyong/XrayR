@@ -11,7 +11,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/XrayR-project/XrayR/common/legocmd/cmd"
+	"github.com/amfiyong/XrayR/common/legocmd/cmd"
 	"github.com/urfave/cli"
 )
 
@@ -39,7 +39,7 @@ func New() (*LegoCMD, error) {
 	configPath := os.Getenv("XRAY_LOCATION_CONFIG")
 	if configPath != "" {
 		path = configPath
-	} else if cwd, err := os.Getwd(); err==nil{
+	} else if cwd, err := os.Getwd(); err == nil {
 		path = cwd
 	} else {
 		path = "."

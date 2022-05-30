@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/XrayR-project/XrayR/api"
-	"github.com/XrayR-project/XrayR/api/pmpanel"
+	"github.com/amfiyong/XrayR/api"
+	"github.com/amfiyong/XrayR/api/pmpanel"
 )
 
 func CreateClient() api.API {
@@ -21,7 +21,7 @@ func CreateClient() api.API {
 
 func TestGetV2rayNodeinfo(t *testing.T) {
 	client := CreateClient()
-    client.Debug()
+	client.Debug()
 	nodeInfo, err := client.GetNodeInfo()
 	if err != nil {
 		t.Error(err)

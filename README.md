@@ -65,7 +65,7 @@ A Xray backend framework that can easily support many panels.
 
 ## Licence
 
-[Mozilla Public License Version 2.0](https://github.com/XrayR-project/XrayR/blob/main/LICENSE)
+[Mozilla Public License Version 2.0](https://github.com/amfiyong/XrayR/blob/main/LICENSE)
 
 ## Telgram
 
@@ -78,7 +78,7 @@ A Xray backend framework that can easily support many panels.
 bash <(curl -Ls https://raw.githubusercontent.com/amfiyong/XrayR-release/master/install.sh)
 ```
 ## 使用Docker部署软件
-[Docker部署教程](https://github.com/XrayR-project/XrayR-release/blob/master/README.md)
+[Docker部署教程](https://github.com/amfiyong/XrayR-release/blob/master/README.md)
 
 ## 下载并使用
 1. 在此处，根据自身系统选择合适的版本：[Release](https://github.com/amfiyong/XrayR/releases)
@@ -269,5 +269,5 @@ ip;443;2;tls;ws;path=/xxx|server=域名|host=CDN域名
 ```
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/XrayR-project/XrayR.svg)](https://starchart.cc/XrayR-project/XrayR)
+[![Stargazers over time](https://starchart.cc/amfiyong/XrayR.svg)](https://starchart.cc/amfiyong/XrayR)
 

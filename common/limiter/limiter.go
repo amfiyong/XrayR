@@ -6,14 +6,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XrayR-project/XrayR/api"
+	"github.com/amfiyong/XrayR/api"
 	"github.com/juju/ratelimit"
 )
 
 type UserInfo struct {
-	UID          int
-	SpeedLimit   uint64
-	DeviceLimit  int
+	UID         int
+	SpeedLimit  uint64
+	DeviceLimit int
 }
 
 type InboundInfo struct {
@@ -82,9 +82,9 @@ func (l *Limiter) GetOnlineDevice(tag string) (*[]api.OnlineUser, error) {
 	onlineUser := make([]api.OnlineUser, 0)
 	if value, ok := l.InboundInfo.Load(tag); ok {
 		inboundInfo := value.(*InboundInfo)
-        // Clear speed limiter bucket for users who are not online
-		inboundInfo.BucketHub.Range(func(key, value interface{}) bool{
-			email :=key.(string)
+		// Clear speed limiter bucket for users who are not online
+		inboundInfo.BucketHub.Range(func(key, value interface{}) bool {
+			email := key.(string)
 			if _, exists := inboundInfo.UserOnlineIP.Load(email); !exists {
 				inboundInfo.BucketHub.Delete(email)
 			}

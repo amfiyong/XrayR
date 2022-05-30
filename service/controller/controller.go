@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/XrayR-project/XrayR/api"
-	"github.com/XrayR-project/XrayR/common/legocmd"
-	"github.com/XrayR-project/XrayR/common/serverstatus"
+	"github.com/amfiyong/XrayR/api"
+	"github.com/amfiyong/XrayR/common/legocmd"
+	"github.com/amfiyong/XrayR/common/serverstatus"
 	"github.com/xtls/xray-core/common/protocol"
 	"github.com/xtls/xray-core/common/task"
 	"github.com/xtls/xray-core/core"
@@ -25,7 +25,7 @@ type Controller struct {
 	userList                *[]api.UserInfo
 	nodeInfoMonitorPeriodic *task.Periodic
 	userReportPeriodic      *task.Periodic
-	panelType				string
+	panelType               string
 }
 
 // New return a Controller service with default parameters.
@@ -97,7 +97,7 @@ func (c *Controller) Start() error {
 
 	log.Printf("[%s: %d] Start report node status", c.nodeInfo.NodeType, c.nodeInfo.NodeID)
 	// delay to start userReport
-	go func ()  {
+	go func() {
 		time.Sleep(time.Duration(c.config.UpdatePeriodic) * time.Second)
 		_ = c.userReportPeriodic.Start()
 	}()

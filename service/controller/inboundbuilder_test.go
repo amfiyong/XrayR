@@ -3,8 +3,8 @@ package controller_test
 import (
 	"testing"
 
-	"github.com/XrayR-project/XrayR/api"
-	. "github.com/XrayR-project/XrayR/service/controller"
+	"github.com/amfiyong/XrayR/api"
+	. "github.com/amfiyong/XrayR/service/controller"
 )
 
 func TestBuildV2ray(t *testing.T) {
@@ -29,7 +29,7 @@ func TestBuildV2ray(t *testing.T) {
 	config := &Config{
 		CertConfig: certConfig,
 	}
-	_, err := InboundBuilder(config, nodeInfo)  
+	_, err := InboundBuilder(config, nodeInfo)
 	if err != nil {
 		t.Error(err)
 	}

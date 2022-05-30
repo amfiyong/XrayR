@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/XrayR-project/XrayR/api"
+	"github.com/amfiyong/XrayR/api"
 	"github.com/go-resty/resty/v2"
 )
 
@@ -148,7 +148,7 @@ func (c *APIClient) GetNodeInfo() (nodeInfo *api.NodeInfo, err error) {
 	case "Trojan":
 		path = fmt.Sprintf("/api/trojan/v1/node/%d", c.NodeID)
 	case "Shadowsocks":
-	path = fmt.Sprintf("/api/ss/v1/node/%d", c.NodeID)
+		path = fmt.Sprintf("/api/ss/v1/node/%d", c.NodeID)
 	default:
 		return nil, fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -169,7 +169,7 @@ func (c *APIClient) GetNodeInfo() (nodeInfo *api.NodeInfo, err error) {
 	case "Trojan":
 		nodeInfo, err = c.ParseTrojanNodeResponse(&response.Data)
 	case "Shadowsocks":
-	nodeInfo, err = c.ParseSSNodeResponse(&response.Data)
+		nodeInfo, err = c.ParseSSNodeResponse(&response.Data)
 	default:
 		return nil, fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -191,7 +191,7 @@ func (c *APIClient) GetUserList() (UserList *[]api.UserInfo, err error) {
 	case "Trojan":
 		path = fmt.Sprintf("/api/trojan/v1/userList/%d", c.NodeID)
 	case "Shadowsocks":
-	path = fmt.Sprintf("/api/ss/v1/userList/%d", c.NodeID)
+		path = fmt.Sprintf("/api/ss/v1/userList/%d", c.NodeID)
 	default:
 		return nil, fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -212,7 +212,7 @@ func (c *APIClient) GetUserList() (UserList *[]api.UserInfo, err error) {
 	case "Trojan":
 		userList, err = c.ParseTrojanUserListResponse(&response.Data)
 	case "Shadowsocks":
-	userList, err = c.ParseSSUserListResponse(&response.Data)
+		userList, err = c.ParseSSUserListResponse(&response.Data)
 	default:
 		return nil, fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -232,7 +232,7 @@ func (c *APIClient) ReportNodeStatus(nodeStatus *api.NodeStatus) (err error) {
 	case "Trojan":
 		path = fmt.Sprintf("/api/trojan/v1/nodeStatus/%d", c.NodeID)
 	case "Shadowsocks":
-	path = fmt.Sprintf("/api/ss/v1/nodeStatus/%d", c.NodeID)
+		path = fmt.Sprintf("/api/ss/v1/nodeStatus/%d", c.NodeID)
 	default:
 		return fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -268,7 +268,7 @@ func (c *APIClient) ReportNodeOnlineUsers(onlineUserList *[]api.OnlineUser) erro
 	case "Trojan":
 		path = fmt.Sprintf("/api/trojan/v1/nodeOnline/%d", c.NodeID)
 	case "Shadowsocks":
-	path = fmt.Sprintf("/api/ss/v1/nodeOnline/%d", c.NodeID)
+		path = fmt.Sprintf("/api/ss/v1/nodeOnline/%d", c.NodeID)
 	default:
 		return fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -336,7 +336,7 @@ func (c *APIClient) GetNodeRule() (*[]api.DetectRule, error) {
 	case "Trojan":
 		path = fmt.Sprintf("/api/trojan/v1/nodeRule/%d", c.NodeID)
 	case "Shadowsocks":
-	path = fmt.Sprintf("/api/ss/v1/nodeRule/%d", c.NodeID)
+		path = fmt.Sprintf("/api/ss/v1/nodeRule/%d", c.NodeID)
 	default:
 		return nil, fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -384,7 +384,7 @@ func (c *APIClient) ReportIllegal(detectResultList *[]api.DetectResult) error {
 	case "Trojan":
 		path = fmt.Sprintf("/api/trojan/v1/trigger/%d", c.NodeID)
 	case "Shadowsocks":
-	path = fmt.Sprintf("/api/ss/v1/trigger/%d", c.NodeID)
+		path = fmt.Sprintf("/api/ss/v1/trigger/%d", c.NodeID)
 	default:
 		return fmt.Errorf("Unsupported Node type: %s", c.NodeType)
 	}
@@ -465,7 +465,7 @@ func (c *APIClient) ParseSSNodeResponse(nodeInfoResponse *json.RawMessage) (*api
 	} else {
 		speedlimit = uint64((shadowsocksNodeInfo.SpeedLimit * 1000000) / 8)
 	}
-	
+
 	if c.DeviceLimit == 0 && shadowsocksNodeInfo.ClientLimit > 0 {
 		c.DeviceLimit = shadowsocksNodeInfo.ClientLimit
 	}
@@ -604,4 +604,3 @@ func (c *APIClient) ParseSSUserListResponse(userInfoResponse *json.RawMessage) (
 
 	return &userList, nil
 }
-
