@@ -18,7 +18,7 @@ require (
 	github.com/spf13/viper v1.14.0
 	github.com/stretchr/testify v1.8.1
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
-	github.com/urfave/cli v1.22.10
+	github.com/urfave/cli v1.22.11
 	github.com/xtls/xray-core v1.6.6
 	golang.org/x/net v0.4.0
 	google.golang.org/appengine v1.6.7 // indirect
