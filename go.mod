@@ -15,7 +15,7 @@ require (
 	github.com/juju/ratelimit v1.0.2
 	github.com/r3labs/diff/v2 v2.15.1
 	github.com/shirou/gopsutil v3.21.11+incompatible
-	github.com/spf13/viper v1.14.0
+	github.com/spf13/viper v1.15.0
 	github.com/stretchr/testify v1.8.1
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
 	github.com/urfave/cli v1.22.10
@@ -26,8 +26,8 @@ require (
 )
 
 require (
-	cloud.google.com/go/compute v1.13.0 // indirect
-	cloud.google.com/go/compute/metadata v0.2.1 // indirect
+	cloud.google.com/go/compute v1.14.0 // indirect
+	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	github.com/Azure/azure-sdk-for-go v62.2.0+incompatible // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.24 // indirect
@@ -69,7 +69,7 @@ require (
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/pprof v0.0.0-20221203041831-ce31453925ec // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/googleapis/enterprise-certificate-proxy v0.2.0 // indirect
+	github.com/googleapis/enterprise-certificate-proxy v0.2.1 // indirect
 	github.com/googleapis/gax-go/v2 v2.7.0 // indirect
 	github.com/gophercloud/gophercloud v0.24.0 // indirect
 	github.com/gophercloud/utils v0.0.0-20220307143606-8e7800759d16 // indirect
@@ -93,7 +93,7 @@ require (
 	github.com/liquidweb/liquidweb-cli v0.6.10 // indirect
 	github.com/liquidweb/liquidweb-go v1.6.3 // indirect
 	github.com/lucas-clemente/quic-go v0.31.1 // indirect
-	github.com/magiconair/properties v1.8.6 // indirect
+	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/marten-seemann/qtls-go1-18 v0.1.3 // indirect
 	github.com/marten-seemann/qtls-go1-19 v0.1.1 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
@@ -117,7 +117,7 @@ require (
 	github.com/ovh/go-ovh v1.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
-	github.com/pelletier/go-toml/v2 v2.0.5 // indirect
+	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/pires/go-proxyproto v0.6.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
@@ -137,12 +137,12 @@ require (
 	github.com/smartystreets/go-aws-auth v0.0.0-20180515143844-0c1422d1fdb9 // indirect
 	github.com/softlayer/softlayer-go v1.0.4 // indirect
 	github.com/softlayer/xmlrpc v0.0.0-20200409220501-5f089df7cb7e // indirect
-	github.com/spf13/afero v1.9.2 // indirect
+	github.com/spf13/afero v1.9.3 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect
-	github.com/subosito/gotenv v1.4.1 // indirect
+	github.com/subosito/gotenv v1.4.2 // indirect
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.365 // indirect
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/dnspod v1.0.365 // indirect
 	github.com/tklauser/numcpus v0.4.0 // indirect
@@ -165,9 +165,9 @@ require (
 	golang.org/x/text v0.5.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/tools v0.4.0 // indirect
-	google.golang.org/api v0.103.0 // indirect
-	google.golang.org/genproto v0.0.0-20221207170731-23e4bf6bdc37 // indirect
-	google.golang.org/grpc v1.51.0 // indirect
+	google.golang.org/api v0.107.0 // indirect
+	google.golang.org/genproto v0.0.0-20221227171554-f9683d7f8bef // indirect
+	google.golang.org/grpc v1.52.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/ns1/ns1-go.v2 v2.6.3 // indirect
 	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
